@@ -53,19 +53,23 @@ button:hover {
   color: rgb(21 29 85);
 }
 
+.container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+}
+
 #content {
   margin-top: 1.5em;
   width: 70%;
-  height: 90%;
-  border: 1px solid orange;
-  padding: 0 2em;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .weather-display,
-.days {
+.days-container {
   height: 48%;
   width: 100%;
   border: 5px solid rgb(182, 165, 118);
@@ -76,6 +80,7 @@ button:hover {
 h1 {
   color: rgb(240, 210, 210);
   text-align: center;
+  height: 10%;
 }
 
 .lat-container,
@@ -138,4 +143,84 @@ p {
 
 .tz-container {
   width: 25%;
+}
+
+.days {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  padding: 10px;
+  gap: 10px;
+  height: 90%;
+}
+
+.day {
+  border-radius: 10px;
+  background-color: rgb(160, 110, 110);
+  text-align: center;
+  color: #ddd;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.dateTime,
+.conditions,
+.temp,
+.humidity {
+  font-size: 0.75em;
+}
+
+h3,
+.longitude,
+.latitude,
+.description,
+.timezone {
+  font-size: 2em;
+}
+
+.weatherAndDaysContainer {
+  height: 100%;
+  width: 100%;
+  padding-right: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.today {
+  width: 30%;
+  height: 100%;
+  padding: 0 2em;
+  margin-top: 1.5em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.tempToday,
+.humidityToday {
+  font-size: 1.5em;
+  color: rgb(235, 66, 24);
+  height: 10%;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.conditionsToday {
+  color: rgb(226, 221, 179);
+  height: 50%;
+}
+
+img {
+  max-width: 600px;
+  max-height: 500px;
 }
