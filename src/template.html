@@ -3,16 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather App</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <button id="home">Home</button>
-        <button id="menu">Menu</button>
-        <button id="about">About</button>
-      </nav>
-    </header>
-    <div id="content"></div>
+    <form action="/" id="form" id="form" novalidate>
+      <label for="location">Location:</label>
+      <input type="text" name="location" id="location" required />
+      <button class="submit">Search</button>
+    </form>
+
+    <div id="content">
+      <div class="weather-display">
+        <h1 class="location-name"></h1>
+        <div class="info-wrapper">
+          <div class="coordinates">
+            <div class="lat-container">
+              <h3>Latitude</h3>
+              <p class="latitude"></p>
+            </div>
+            <div class="long-container">
+              <h3>Longitude</h3>
+              <p class="longitude"></p>
+            </div>
+          </div>
+          <div class="desc-container">
+            <h3>Description</h3>
+            <p class="description"></p>
+          </div>
+          <div class="tz-container">
+            <h3>Timezone</h3>
+            <p class="timezone"></p>
+          </div>
+        </div>
+      </div>
+      <div class="days"></div>
+    </div>
   </body>
 </html>

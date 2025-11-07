@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "mononoki";
+  src: url("fonts/mononoki/mononoki-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("images/rain-gif.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  font-family: "mononoki", sans-serif;
+  padding: 1em;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+label {
+  color: rgb(240, 210, 210);
+  font-size: 1em;
+}
+
+input,
+button {
+  font-size: 0.9em;
+  height: 2em;
+  padding: 0.5em;
+  border-radius: 5px;
+  background-color: rgb(240, 210, 210);
+  font-family: inherit;
+}
+
+button {
+  text-align: center;
+  padding: 0.25em 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(240, 221, 221);
+  color: rgb(21 29 85);
+}
+
+#content {
+  margin-top: 1.5em;
+  width: 70%;
+  height: 90%;
+  border: 1px solid orange;
+  padding: 0 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.weather-display,
+.days {
+  height: 48%;
+  width: 100%;
+  border: 5px solid rgb(182, 165, 118);
+  background-color: rgb(31 54 107);
+  border-radius: 10px;
+}
+
+h1 {
+  color: rgb(240, 210, 210);
+  text-align: center;
+}
+
+.lat-container,
+.long-container,
+.desc-container,
+.tz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desc-container,
+.tz-container {
+  margin-top: 1.75em;
+}
+
+.coordinates {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  gap: 2em;
+  height: 50%;
+  width: 20%;
+  text-align: left;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+.latitude,
+.longitude {
+  margin-top: 0.25em;
+}
+
+.description {
+  width: 50%;
+  margin-top: 1.25em;
+  text-align: center;
+}
+
+.timezone {
+  width: 100%;
+  margin-top: 1.25em;
+  text-align: center;
+}
+
+.info-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.coordinates {
+  width: 25%;
+}
+
+.desc-container {
+  width: 50%;
+}
+
+.tz-container {
+  width: 25%;
+}
